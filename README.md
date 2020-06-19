@@ -29,36 +29,43 @@
 <ul>
   <p>1 - As a logged-in user: </p>
   <li>See user profile and this is the main page</li>
-  
+</ul>
+<ul>
   <p>2 - Navigation menu with:<p>
   <li>All my transactions</li>
   <li>All my external transactions</li>
   <li>All groups</li>
-  
+</ul>
+<ul>
   <p>3 - All transactions list page:</p>
   <li>Total amount (Balance)</li>
   <li>A ordered transactions list</li>
   <li>Each line displays its name, amount and date, with an icon from group</li>
   <li>Button to add transactions</li>
-
+</ul>
+<ul>
   <p>4 - External transactions list page:</p>
   <li>Show all transactions created but not assigned to groups (sorted by most recent).</li>
   <li>Similar layout as transactions list</li>
-  
+</ul>
+<ul>
   <p>5 - Groups transactions page:</p>
   <li>List all categories by alphabetical order</li>
-  <li>Each line display a icon, name and creation date</li>]
+  <li>Each line display a icon, name and creation date</li>
   <li>Button to create new category</li>
   <li>Similar layout as profile</li>
-
+</ul>
+<ul>
   <p>6 - Group transactions page:</p>
   <li>See all related transations</li>
   <li>Similar layout as transactions list</li>
   <li>Plus show name of who made the transation</li>
-
+</ul>
+<ul>
   <p>7 - Create new...</p>
   <li>user, group or transation has the properly form with styles</li>
-
+</ul>
+<ul>
   <p>7 - Extra feature</p>
   <li>Can see the balance based on transations expend x earned</li>
 </ul>
@@ -145,4 +152,5 @@ A special thanks for the code reviewers.
 
 ### License
 Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
+<br>
 <strong>Creative Commons • June 2020</strong>
