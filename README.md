@@ -16,7 +16,7 @@
 * [Author](#author)
 * [License](#license)
 
-## Features
+## Business requirements
 
 <p>Use same design pattern in all pages</li>
 
@@ -86,7 +86,7 @@
 
 #### Install
 To use this program, you will need install:
-* Ruby Language - Version 2.5 up to 2.7 - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
+* Ruby Language - Version 2.6 - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
 
 * Ruby on Rails - Version 5.2 - [Install guide](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
 
@@ -94,7 +94,7 @@ To use this program, you will need install:
 #### Get a local copy
 Now you need a copy of this application, if you are using Git:
 ```js
-git clone git@github.com:SevlaMare/ror-social-scaffold.git
+git clone git@github.com:SevlaMare/wallet.git
 ```
 Otherwise just hit (Download Zip) on green button (Clone or Download) at top of this page.
 
