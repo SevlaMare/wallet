@@ -4,15 +4,15 @@ class SessionsController < ApplicationController
 
   # login button
   def create
-    # find_by for start only (can throw 404)
     if userx = User.find_by(name: params[:username_in])
-      cookies[:current_user_id] = { value: userx.id, expires: Time.now + 3600}
+      sessions[:current_user_id] = userx.id
+
+      redirect_to user_path(sessions[:current_user_id])
     end
-    redirect_to user_path(cookies[:current_user_id])
   end
 
   # logout
   def destroy
-    # end session
+    sessions.delete(current_user_id)
   end
 end
