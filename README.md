@@ -66,7 +66,7 @@
   <li>user, group or transation has the properly form with styles</li>
 </ul>
 <ul>
-  <p>7 - Extra feature</p>
+  <p>8 - Extra feature</p>
   <li>Can see the balance based on transations expend x earned</li>
 </ul>
 
