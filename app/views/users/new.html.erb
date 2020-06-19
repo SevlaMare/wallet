@@ -1,7 +1,2 @@
 NEW USER
-<%= form_with(model: @user) do |form| %>
-  <%= form.label(:name, 'Your username: ') %>
-  <%= form.text_field(:name) %>
-
-  <%= form.submit('Make it!') %>
-<% end %>
+<%= render partial: "new_user" %>
