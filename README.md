@@ -31,7 +31,7 @@
   <li>See user profile and this is the main page</li>
 </ul>
 <ul>
-  <p>2 - Navigation menu with:<p>
+  <p>2 - Navigation links on user profile:<p>
   <li>All my transactions</li>
   <li>All my external transactions</li>
   <li>All groups</li>
