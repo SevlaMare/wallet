@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <nav class="flex space-between">
+      <div>
+        <%= link_to 'LOGIN', new_session_path %>
+        <%= link_to 'REGISTER', new_user_path %>
+      </div>
+
+      <div>
+        <%= link_to 'LOGOUT', new_session_path, method: :delete %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
