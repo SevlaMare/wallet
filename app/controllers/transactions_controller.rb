@@ -1,26 +1,22 @@
 class TransactionsController < ApplicationController
-  # before_save :auto_timestamp
-
   def index
     # home
   end
 
   def new
-    @transaction = Transaction.new
+    @transaction = current_user.transactions.build
   end
 
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = current_user.transactions.build(transaction_params)
     @transaction.save
+
+    redirect_to user_path(current_user.id)
   end
 
   private
 
   def transaction_params
-    params.require(:transaction).permit(:Name, :Amount)
+    params.require(:transaction).permit(:name, :amount)
   end
-
-  # def auto_timestamp
-  #   self.createAt = DateTime.now
-  # end
 end

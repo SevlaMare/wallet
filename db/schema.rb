@@ -12,21 +12,22 @@
 
 ActiveRecord::Schema.define(version: 2020_06_22_163940) do
 
-  create_table "groups", primary_key: "GroupId", force: :cascade do |t|
-    t.string "Name"
-    t.string "Icon"
-    t.datetime "CreateAt"
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.datetime "created_at", null: false
   end
 
-  create_table "transactions", primary_key: "TransactionId", force: :cascade do |t|
-    t.string "AuthorId"
-    t.string "Name"
-    t.float "Amount"
-    t.datetime "CreateAt"
+  create_table "transactions", force: :cascade do |t|
+    t.string "name"
+    t.float "amount"
+    t.datetime "created_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
-  create_table "users", primary_key: "AuthorId", force: :cascade do |t|
-    t.string "Name"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
   end
 
 end

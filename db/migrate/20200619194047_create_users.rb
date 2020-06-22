@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
-    create_table :users, primary_key: 'AuthorId' do |t|
-      t.string :Name
+    create_table :users do |t|
+      t.string :name
     end
   end
 end
