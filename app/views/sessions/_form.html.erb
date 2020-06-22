@@ -1,5 +1,6 @@
 <%= form_with(url: sessions_path) do |form| %>
   <%= form.label(:username_in, 'Type your username: ') %>
   <%= form.text_field(:username_in) %>
+
   <%= form.submit('Login') %>
 <% end %>

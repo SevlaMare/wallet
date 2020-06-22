@@ -1,5 +1,6 @@
 <%= form_with(model: @user) do |form| %>
-  <%= form.label(:name, 'Your username: ') %>
-  <%= form.text_field(:name) %>
+  <%= form.label(:Name, 'Your username: ') %>
+  <%= form.text_field(:Name) %>
+
   <%= form.submit('Make it!') %>
 <% end %>
