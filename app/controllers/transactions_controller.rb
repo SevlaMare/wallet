@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  #before_save :auto_timestamp
+  # before_save :auto_timestamp
 
   def index
     # home
@@ -15,6 +15,7 @@ class TransactionsController < ApplicationController
   end
 
   private
+
   def transaction_params
     params.require(:transaction).permit(:Name, :Amount)
   end
