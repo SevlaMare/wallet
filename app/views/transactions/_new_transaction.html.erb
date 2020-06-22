@@ -1,0 +1,9 @@
+<%= form_with(model: @transaction) do |form| %>
+  <%= form.label(:Name, 'Matter: ') %>
+  <%= form.text_field(:Name) %>
+
+  <%= form.label(:Amount, 'Amount: ') %>
+  <%= form.number_field(:Amount) %>
+
+  <%= form.submit('Register it!') %>
+<% end %>

@@ -6,17 +6,17 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @cash = Transaction.new
+    @transaction = Transaction.new
   end
 
   def create
-    @cash = Transaction.new(transaction_params)
-    @cash.save
+    @transaction = Transaction.new(transaction_params)
+    @transaction.save
   end
 
   private
   def transaction_params
-    params.require(:transaction).permit(:name, :amount)
+    params.require(:transaction).permit(:Name, :Amount)
   end
 
   # def auto_timestamp

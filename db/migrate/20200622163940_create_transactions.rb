@@ -1,9 +1,10 @@
 class CreateTransactions < ActiveRecord::Migration[5.2]
   def change
-    create_table :transactions, primary_key: 'authorId' do |t|
-      t.string :name
-      t.float :amount
-      t.datetime :createAt
+    create_table :transactions, primary_key: 'TransactionId' do |t|
+      t.string :AuthorId
+      t.string :Name
+      t.float :Amount
+      t.datetime :CreateAt
     end
   end
 end

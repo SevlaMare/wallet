@@ -1,2 +1,0 @@
-class Transation < ApplicationRecord
-end
