@@ -1,0 +1,9 @@
+<%= form_with(model: @group) do |form| %>
+  <%= form.label(:name, 'Group name: ') %>
+  <%= form.text_field(:name) %>
+
+  <%= form.label(:icon, 'Icon link: ') %>
+  <%= form.text_field(:icon) %>
+
+  <%= form.submit('New group') %>
+<% end %>
