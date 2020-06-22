@@ -1,14 +1,10 @@
 class UsersController < ApplicationController
-  def index
-  end
-  
   def show
     # user profile
   end
 
   def new
     @user = User.new
-    # new user page
   end
 
   def create
