@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_194047) do
+ActiveRecord::Schema.define(version: 2020_06_22_144939) do
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.datetime "createAt"
+  end
+
+  create_table "transations", primary_key: "authorId", force: :cascade do |t|
+    t.string "name"
+    t.float "amount"
+    t.datetime "createAt"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
