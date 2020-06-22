@@ -20,21 +20,21 @@ nav {
 }
 
 nav a {
- color: #333;
- font-size: 1.2rem;
- font-weight: bold;
- text-decoration: none;
- margin-left: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
 nav a:hover {
- color: #fff;
+  color: #fff;
 }
 
 .flex {
- display: flex;
+  display: flex;
 }
 
 .space-between {
- justify-content: space-between;
+  justify-content: space-between;
 }
