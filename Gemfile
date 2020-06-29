@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # core
-ruby '2.6.5'
+ruby '2.6.6'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # gem devise
@@ -19,7 +19,7 @@ gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'sqlite3'
-  # gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -47,4 +47,4 @@ end
 # end
 
 # Windows compatible
-# gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
