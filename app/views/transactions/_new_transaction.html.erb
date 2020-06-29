@@ -5,9 +5,10 @@
   <%= form.label(:amount, 'Amount: ') %>
   <%= form.number_field(:amount) %>
 
-  <% @groups.each do |option| %>
-    <%= option.name %>
-    <%= form.check_box(option.name) %>
+  <%= form.select(:group_id) do %>
+    <% @groups.each do |group| %>
+      <%= content_tag(:option, group.name, value: group.id) %>
+    <% end %>
   <% end %>
 
   <%= form.submit('Register it!') %>
