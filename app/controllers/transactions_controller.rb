@@ -1,6 +1,6 @@
 class TransactionsController < ApplicationController
   def index
-    # home
+    @transaction = Transaction.all
   end
 
   def new
@@ -13,6 +13,10 @@ class TransactionsController < ApplicationController
     @transaction.save
 
     redirect_to user_path(current_user.id)
+  end
+
+  def external
+    # TODO: apply scope, list transactions without group assign
   end
 
   private

@@ -1,11 +1,11 @@
 class GroupsController < ApplicationController
   def index
     # list all groups
+    @groups = Group.all
   end
 
   def show
     # access all transactions from one group
-    @group = Group.all
   end
 
   def new
