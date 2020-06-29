@@ -5,5 +5,10 @@
   <%= form.label(:amount, 'Amount: ') %>
   <%= form.number_field(:amount) %>
 
+  <% @groups.each do |option| %>
+    <%= option.name %>
+    <%= form.check_box(option.name) %>
+  <% end %>
+
   <%= form.submit('Register it!') %>
 <% end %>

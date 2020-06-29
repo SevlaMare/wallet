@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 
   def show
     # access all transactions from one group
+    @group = Group.all
   end
 
   def new
