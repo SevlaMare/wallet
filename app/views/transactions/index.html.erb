@@ -1,6 +1,10 @@
 <h1>TRANSACTIONS</h1>
 
-<% @transaction.ordered_by_most_recent.each do |line| %>
+<h2>TOTAL AMOUNT: 
+  <%= total_amount_with_group %>
+</h2>
+
+<% @transaction.sort_most_recent.each do |line| %>
   <%= line.name %>
   <%= line.amount %>
   <%= line.created_at.strftime("%b %d") %>
