@@ -1,7 +1,6 @@
 <h1>GROUPS</h1>
 
-<% @groups.each do |group| %>
-  <%= link_to group.name, group_path(group) %>
-<% end %>
+<%= groups_list(@groups) %>
 
-<%= link_to 'NEW GROUP', new_group_path %>
+<%= link_to 'NEW GROUP', new_group_path,
+:class => "btn" %>
