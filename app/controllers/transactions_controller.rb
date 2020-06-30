@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   def index
+    # TODO: scope where group_id not nil
     @transaction = Transaction.all
   end
 
@@ -16,7 +17,8 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    # TODO: apply scope, list transactions without group assign
+    # TODO: scope where group_id nil
+    @transaction = Transaction.all
   end
 
   private

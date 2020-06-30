@@ -1,1 +1,19 @@
-<h1>External</h1>
+<h1>EXTERNAL TRANSACTIONS</h1>
+
+<h2>TOTAL AMOUNT: 
+  <%= total_amount_without_group %>
+</h2>
+
+<% @transaction.sort_most_recent.each do |line| %>
+  <%= line.name %>
+  <%= line.amount %>
+  <%= line.created_at.strftime("%b %d") %>
+
+  <%= link_to raw('
+    <span class="material-icons">account_balance_wallet</span>
+  '), root_path %>
+
+  <br>
+<% end %>
+
+<%= link_to 'NEW TRANSACTION', new_transaction_path %>
