@@ -1,12 +1,12 @@
 <h1>TRANSACTIONS</h1>
 
-<h2>TOTAL AMOUNT: 
-  <%= total_amount_with_group %>
+<h2>TOTAL AMOUNT:
+  <%= number_with_precision(total_amount_with_group, :precision => 0) %>
 </h2>
 
 <% @transaction.with_group.sort_most_recent.each do |line| %>
-  <%= line.name %>
-  <%= line.amount %>
+  <%= line.name %> •
+  <%= number_with_precision(line.amount, :precision => 2) %> •
   <%= line.created_at.strftime("%b %d") %>
 
   <%= link_to raw('

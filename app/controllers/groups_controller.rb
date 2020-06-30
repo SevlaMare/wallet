@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    # access all transactions from one group
+    @group = Group.find(params[:id])
   end
 
   def new

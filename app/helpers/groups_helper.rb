@@ -8,4 +8,8 @@ module GroupsHelper
       end
     end
   end
+
+  def total_amount_with_group
+    Transaction.with_group.sum(:amount)
+  end
 end
