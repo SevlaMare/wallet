@@ -1,11 +1,15 @@
 class GroupsController < ApplicationController
   def index
-    # list all groups
     @groups = Group.all
   end
 
   def show
     @group = Group.find(params[:id])
+
+    @transactions = Transaction
+      .includes(:group, :user)
+      .where(group_id: @group.id)
+      .order('created_at DESC')
   end
 
   def new

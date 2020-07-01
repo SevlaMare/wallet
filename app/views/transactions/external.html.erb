@@ -1,10 +1,11 @@
 <h1>EXTERNAL TRANSACTIONS</h1>
 
 <h2>TOTAL AMOUNT:
-  <%= number_with_precision(total_amount_without_group, :precision => 0) %>
+  <%= number_with_precision(current_user.transactions.without_group.sum(:amount),
+  :precision => 0) %>
 </h2>
 
-<% @transaction.without_group.sort_most_recent.each do |line| %>
+<% current_user.transactions.without_group.sort_most_recent.each do |line| %>
   <%= line.name %> •
   <%= number_with_precision(line.amount, :precision => 2) %> •
   <%= line.created_at.strftime("%b %d") %>

@@ -1,2 +1,13 @@
 <h1><%= @group.name %></h1>
 
+<h2>total amount:
+  USD$ <%= number_with_precision(total_amount_with_group, :precision => 2) %>
+</h2>
+
+<% @group.transactions.each do |line| %>
+  <%= line.name %> •
+  $USD <%= number_with_precision(line.amount, :precision => 2) %> •
+  <%= line.created_at.strftime("%b %d") %>
+  by <%= NAME OF USER WHO POST %>
+  <br>
+<% end %>
