@@ -7,10 +7,10 @@ class Transaction < ApplicationRecord
   scope :without_group, -> { where('group_id' => nil) }
 
   validates :name,
-    presence: true,
-    length: { minimum: 3 }
+            presence: true,
+            length: { minimum: 3 }
 
   validates :amount,
-    presence: true,
-    length: { maximum: 12 }
+            presence: true,
+            length: { maximum: 12 }
 end
