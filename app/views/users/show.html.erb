@@ -1,6 +1,8 @@
 PROFILE
-<h1><%= current_user.name %></h1>
+<%= current_username %>
 
-<%= link_to 'All my transactions', transactions_path %><br>
-<%= link_to 'All my external transactions', external_path %><br>
-<%= link_to 'Group', groups_path %>
+<ul>
+  <li><%= link_to 'All my transactions', transactions_path %><br></li>
+  <li><%= link_to 'All my external transactions', external_path %><br></li>
+  <li><%= link_to 'Group', groups_path %></li>
+</ul>

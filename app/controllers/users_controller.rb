@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: %i[show]
+
   def show
     # user profile
   end
