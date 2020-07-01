@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
+  before_action :require_login, only: [:index, :new, :create, :external]
+
   def index
-    # TODO: scope where group_id not nil
     @transaction = Transaction.all
   end
 
@@ -17,7 +18,6 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    # TODO: scope where group_id nil
     @transaction = Transaction.all
   end
 
