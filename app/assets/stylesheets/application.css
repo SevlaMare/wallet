@@ -17,12 +17,25 @@
  * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
   color: #fff;
  }
 
 .flex { display: flex; }
 .space-between { justify-content: space-between; }
+.align-center { align-items: center; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  background: rgb(55,120,194);
+  background: linear-gradient(15deg, rgba(55,120,194,1) 15%, rgba(51,51,51,1) 95%);
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 280px;
+  margin: 5px auto;
+}
 
 li { 
   list-style-type: none !important;
@@ -34,18 +47,38 @@ a { text-decoration: none !important; }
 h1 { 
   margin-bottom: 30px;
   font-size: 1.1rem;
-  font-weight: normal;
 }
 
-body {
-  background: rgb(55,120,194);
-  background: linear-gradient(15deg, rgba(55,120,194,1) 15%, rgba(51,51,51,1) 95%);
-  background-repeat: no-repeat;
+h3 {
+  font-size: 1rem;
+  color: lightgrey;
 }
 
-.container {
-  max-width: 300px;
-  margin: 5px auto;
+.board {
+  padding: 15px 10px;
+  color: #434b54;
+  background: #fff;
+}
+
+.board p {
+  color: #434b54;
+  font-weight: 700;
+}
+
+.list {
+  background: #f1f3f2;
+}
+
+.list-item {
+  color: #333;
+}
+
+.dark-text {
+  color: #434b54;
+}
+
+.t-bold {
+  font-weight: 700;
 }
 
 nav {
@@ -75,15 +108,17 @@ nav a:hover {
 }
 
 .btn {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  margin-top: 25px;
+  margin: 10px auto;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+
+  border: solid 2px #fff;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.btn-bg {
+  background-color: #5fb523;
 }
 
 .alert {
