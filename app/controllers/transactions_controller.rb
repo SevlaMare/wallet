@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  before_action :require_login, only: [:index, :new, :create, :external]
+  before_action :require_login, only: %i[index new create external]
 
   def index
     @transaction = Transaction.all

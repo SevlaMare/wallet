@@ -1,6 +1,11 @@
 <h1>GROUPS</h1>
 
-<%= groups_list(@groups) %>
+<% @groups.each do |line| %>
+  <img src="<%= line.icon %>" class="icon">
+  <%= link_to line.name, group_path(line.id) %> •
+  <%= line.created_at.strftime("%b %d") %>
+  <br>
+<% end %>
 
 <%= link_to 'NEW GROUP', new_group_path,
 :class => "btn" %>

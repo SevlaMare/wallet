@@ -2,9 +2,6 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def require_login
-    unless current_user
-      flash[:error] = 'You must be logged in to access this section'
-      redirect_to root_path
-    end
+    redirect_to new_session_path, notice: 'You must be logged in to access this section' unless current_user
   end
 end
