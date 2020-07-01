@@ -7,7 +7,8 @@
 
 ## Content
 
-* [Features](#features)
+* [Business requirements](#business-requirements)
+* [Potential future features](#potential-future-features)
 * [Built With](#built-with)
 * [Database Diagram](#database-diagram)
 * [Getting Start](#getting-start)
@@ -57,18 +58,24 @@
 </ul>
 <ul>
   <p>6 - Group transactions page:</p>
-  <li>See all related transations</li>
+  <li>See all related transactions</li>
   <li>Similar layout as transactions list</li>
-  <li>Plus show name of who made the transation</li>
+  <li>Plus show name of who made the transaction</li>
 </ul>
 <ul>
   <p>7 - Create new...</p>
-  <li>user, group or transation has the properly form with styles</li>
+  <li>user, group or transaction has the properly form with styles</li>
 </ul>
 <ul>
   <p>8 - Extra feature</p>
-  <li>Can see the balance based on transations expend x earned</li>
+  <li>Can see the balance based on transactions expend x earned</li>
 </ul>
+
+## Potential future features
+<ul>
+  <li>checklist while creating account</li>
+</ul>
+
 
 ## Built With
 
