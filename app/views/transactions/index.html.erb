@@ -1,8 +1,16 @@
-<h1>TRANSACTIONS</h1>
+<div class="flex space-between">
+  <span class="material-icons">menu</span>
+  <h1>TRANSACTIONS</h1>
+  <span class="material-icons">
+  search
+  </span>
+</div>
+
 
 <h2>TOTAL AMOUNT:
-  <%= number_with_precision(current_user.transactions.with_group.sum(:amount),
-  :precision => 0) %>
+  <%= number_with_precision(
+    current_user.transactions.with_group.sum(:amount),
+    :precision => 0) %>
 </h2>
 
 <% current_user.transactions.with_group.sort_most_recent.each do |line| %>
