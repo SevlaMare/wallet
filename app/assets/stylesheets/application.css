@@ -27,15 +27,17 @@ nav a {
 
 nav a:hover { color: #fff; }
 
+/* START */
+.flex { display: flex; }
+.space-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.t-center {text-align: center; }
+
 * {
   margin: 0;
   padding: 0;
   color: #fff;
 }
-
-.flex { display: flex; }
-.space-between { justify-content: space-between; }
-.align-center { align-items: center; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -93,21 +95,8 @@ h3 {
   background: #fff;
 }
 
-.dark-text {
-  color: #434b54;
-}
-
-.t-bold {
-  font-weight: 700;
-}
-
-.flex {
-  display: flex;
-}
-
-.space-between {
-  justify-content: space-between;
-}
+.dark-text { color: #434b54; }
+.t-bold { font-weight: 700; }
 
 .btn {
   margin: 10px auto;
@@ -122,10 +111,11 @@ h3 {
 .btn-bg { background-color: #5fb523; }
 
 .alert {
-  color: #fff;
-  background-color: #943535;
   text-align: center;
   max-width: 300px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #943535;
 }
 
 .icon {
