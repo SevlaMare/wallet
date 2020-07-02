@@ -4,7 +4,8 @@ class CreateTransactions < ActiveRecord::Migration[5.2]
       t.string :name
       t.float :amount
       t.datetime "created_at", null: false
-      t.references :user
+      t.references :user, foreign_key: true
+      t.references :group, foreign_key: true
     end
   end
 end

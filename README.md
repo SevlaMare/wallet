@@ -73,7 +73,9 @@
 
 ## Potential future features
 <ul>
-  <li>checklist while creating account</li>
+  <li>Checklist while creating account</li>
+  <li>Search button</li>
+  <li>Dynamic Navbar</li>
 </ul>
 
 

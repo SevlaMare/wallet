@@ -5,6 +5,7 @@
   <%= form.label(:amount, 'Amount: ') %>
   <%= form.number_field(:amount) %>
 
+  <%-#TODO: render only if not nill -%>
   <%= form.select(:group_id) do %>
     <% @groups.each do |group| %>
       <%= content_tag(:option, group.name, value: group.id) %>

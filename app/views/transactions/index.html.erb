@@ -15,15 +15,15 @@
 <div class="list">
 <% current_user.transactions.with_group.sort_most_recent.each do |line| %>
   <div class="list-item">
-    <%= link_to raw('
-      <span class="material-icons">account_balance_wallet</span>
-    '), root_path %>
+
+    <img src="<%= line.group.icon %>" class="icon float">
 
     <div class="flex space-between">
       <p class="dark-text"><%= line.name %></p>
       <p class="dark-text t-bold">$<%= number_with_precision(line.amount, :precision => 2) %></p>
     </div>
 
+    <hr>
     <%= line.created_at.strftime("%d %b %Y") %><br>
   </div>
 <% end %>
