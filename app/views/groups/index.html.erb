@@ -4,12 +4,24 @@
   <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
 </div>
 
-<% @groups.each do |line| %>
-  <img src="<%= line.icon %>" class="icon">
-  <%= link_to line.name, group_path(line.id) %> •
-  <%= line.created_at.strftime("%b %d") %>
-  <br>
-<% end %>
 
-<%= link_to 'NEW GROUP', new_group_path,
-:class => "btn" %>
+<div class="list">
+<% @groups.each do |line| %>
+  <div class="list-item">
+    <img src="<%= line.icon %>" class="icon float">
+
+    <div class="flex space-between">
+      <p><%= link_to line.name, group_path(line.id), :class => "dark-text" %></p>
+    </div>
+
+    <hr>
+    <%= line.created_at.strftime("%d %b %Y") %><br>
+  </div>
+<% end %>
+</div>
+
+
+<div class="flex btn-bg">
+  <%= link_to 'NEW GROUP', new_group_path,
+    :class => "btn" %>
+</div>
