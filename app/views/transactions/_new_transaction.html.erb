@@ -1,5 +1,5 @@
 <%= form_with(model: @transaction) do |form| %>
-  <%= form.label(:name, 'Matter: ') %>
+  <%= form.label(:name, 'Subject: ') %>
   <%= form.text_field(:name) %>
 
   <%= form.label(:amount, 'Amount: ') %>
@@ -12,5 +12,7 @@
     <% end %>
   <% end %>
 
-  <%= form.submit('Register it!') %>
+  <div class="flex btn-bg">
+    <%= form.submit('Register it!', class: 'btn btn-bg') %>
+  </div>
 <% end %>

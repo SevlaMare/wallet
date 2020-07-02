@@ -119,9 +119,7 @@ h3 {
   color: #fff;
 }
 
-.btn-bg {
-  background-color: #5fb523;
-}
+.btn-bg { background-color: #5fb523; }
 
 .alert {
   color: #fff;
@@ -138,4 +136,9 @@ h3 {
 hr {
   color: #f1f3f2;
   margin: 10px 0;
+}
+
+input, select, textarea {
+  color: #333;
+  margin-bottom: 10px;
 }
