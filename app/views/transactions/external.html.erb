@@ -4,17 +4,27 @@
   <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
 </div>
 
-<h2>TOTAL AMOUNT:
-  <%= number_with_precision(current_user.transactions.without_group.sum(:amount),
-  :precision => 0) %>
-</h2>
+<div class="flex space-between align-center board">
+  <h3>Total amount</h3>
 
+  <p>$<%= number_with_precision(
+    current_user.transactions.without_group.sum(:amount),
+    :precision => 2) %></p>
+</div>
+
+<div class="list">
 <% current_user.transactions.without_group.sort_most_recent.each do |line| %>
-  <%= line.name %> •
-  <%= number_with_precision(line.amount, :precision => 2) %> •
-  <%= line.created_at.strftime("%b %d") %>
-  <br>
+  <div class="list-item">
+    <div class="flex space-between">
+      <p class="dark-text"><%= line.name %></p>
+      <p class="dark-text t-bold">$<%= number_with_precision(line.amount, :precision => 2) %></p>
+    </div><hr>
+    <%= line.created_at.strftime("%d %b %Y") %><br>
+  </div>
 <% end %>
+</div>
 
-<%= link_to 'NEW TRANSACTION', new_transaction_path,
-:class => "btn" %>
+<div class="flex btn-bg">
+  <%= link_to 'NEW TRANSACTION', new_transaction_path,
+  :class => "btn btn-bg" %>
+</div>
