@@ -1,4 +1,8 @@
-<h1>EXTERNAL TRANSACTIONS</h1>
+<div class="flex space-between">
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, root_path %>
+  <h1>EXTERNAL TRANS.</h1>
+  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
+</div>
 
 <h2>TOTAL AMOUNT:
   <%= number_with_precision(current_user.transactions.without_group.sum(:amount),
