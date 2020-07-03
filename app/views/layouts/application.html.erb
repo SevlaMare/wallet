@@ -14,10 +14,24 @@
   </head>
 
   <body class="container">
-    <% flash.each do |type, msg| %>
-      <div class="alert">
-        <p><%= msg %></p>
-      </div>
+    <% flash.each do |msg| %>
+      <% if notice %>
+        <p class="alert alert-success">
+          <%= notice %>
+        </p>
+      <% end %>
+    
+      <% if alert.present? %>
+        <p class="alert alert-danger">
+          <%= alert %>
+        </p>
+      <% end %>
+    
+      <% if success.present? %>
+        <p class="alert alert-danger">
+          <%= success %>
+        </p>
+      <% end %>
     <% end %>
 
     <%= yield %>

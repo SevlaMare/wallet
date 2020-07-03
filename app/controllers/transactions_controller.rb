@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :require_login, only: %i[index new create external]
 
   def index
-    @transaction = Transaction.all
+    @transaction = Transaction.all.eager_load(:group)
     @group = Group.all
   end
 
@@ -13,9 +13,9 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = current_user.transactions.build(transaction_params)
-    @transaction.save
+    return redirect_to user_path(current_user.id) if @transaction.save
 
-    redirect_to user_path(current_user.id)
+    render 'new', flash[:error] = 'Friend request has not been sent'
   end
 
   def external

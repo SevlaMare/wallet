@@ -21,7 +21,6 @@
   <p class="dark-text">$USD <%= number_with_precision(
     line.amount, :precision => 2) %></p>
   </div>
-
     <%= line.created_at.strftime("%d %b %Y") %> •
     by <%= line.user.name %><br>
   </div>

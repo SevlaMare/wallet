@@ -10,9 +10,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+    if @user.save
+      # should make login
+      cookies[:current_user_id] = 1
 
-    redirect_to root_path
+      # flash[:notice] = 'Account successfully created'
+      redirect_to root_path, notice: 'Account successfully created'
+    else
+      # flash.now[:notice] = 'Try again'
+      flash.now[:alert] = @user.errors.full_messages.join(', ')
+      render :new
+    end
   end
 
   private
