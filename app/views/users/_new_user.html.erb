@@ -1,12 +1,10 @@
-<% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <li class="alert alert-danger"><%= error %></li>
-  <% end %>
-<% end %>
+<%= render partial: "layouts/errors" %>
 
 <%= form_with(model: @user) do |form| %>
   <%= form.label(:name, 'Your username: ') %>
   <%= form.text_field(:name) %>
 
-  <%= form.submit('Make it!') %>
+  <div class="flex btn-bg">
+    <%= form.submit('Make my account!', class: 'btn btn-bg') %>
+  </div>
 <% end %>

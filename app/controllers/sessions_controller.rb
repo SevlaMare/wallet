@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       value: userx.id, expires: Time.now + 3600
     }
 
-    redirect_to user_path(cookies[:current_user_id])
+    redirect_to root_path
   end
 
   # logout button
