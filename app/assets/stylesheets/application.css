@@ -18,7 +18,7 @@
 .flex { display: flex; }
 .space-between { justify-content: space-between; }
 .align-center { align-items: center; }
-.t-center {text-align: center; }
+.t-center { text-align: center; }
 
 * {
   margin: 0;

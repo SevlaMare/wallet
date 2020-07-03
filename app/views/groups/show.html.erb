@@ -1,16 +1,34 @@
-<h1>Group transactions</h1>
-<h2><%= @group.name %></h2>
+<div class="flex space-between">
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, transactions_path %>
+  <h1><%= @group.name %> transactions</h1>
+  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
+</div>
 
-<h2>total amount:
-  USD$ <%= number_with_precision(total_amount_with_group, :precision => 2) %>
-</h2>
+<div class="flex space-between align-center board">
+  <h3>Total amount</h3>
 
+  <p>$<%= number_with_precision(
+    @group.transactions.sum(:amount),
+    :precision => 2) %></p>
+</div>
+
+<div class="list">
 <% @group.transactions.each do |line| %>
-  <div>
-    <%= line.name %> •
-    $USD <%= number_with_precision(line.amount, :precision => 2) %> •
-    <%= line.created_at.strftime("%b %d") %>
-    by <%= line.user.name %>
-    <br>
+  <div class="list-item">
+
+  <div class="flex space-between">
+  <p class="dark-text"><%= line.name %></p>
+  <p class="dark-text">$USD <%= number_with_precision(
+    line.amount, :precision => 2) %></p>
+  </div>
+
+    <%= line.created_at.strftime("%d %b %Y") %> •
+    by <%= line.user.name %><br>
   </div>
 <% end %>
+</div>
+
+<div class="flex btn-bg">
+  <%= link_to 'NEW TRANSACTION', new_transaction_path,
+    :class => "btn" %>
+</div>
