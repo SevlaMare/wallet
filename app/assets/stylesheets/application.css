@@ -14,19 +14,6 @@
  *= require_self
  */
 
-nav { display: none !important; }
-nav { padding: 10px; }
-
-nav a {
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: 15px;
-}
-
-nav a:hover { color: #fff; }
-
 /* START */
 .flex { display: flex; }
 .space-between { justify-content: space-between; }

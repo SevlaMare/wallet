@@ -14,20 +14,6 @@
   </head>
 
   <body class="container">
-    <nav class="flex space-between">
-      <div>
-        <%= link_to 'LOGIN', new_session_path %>
-        <%= link_to 'REGISTER', new_user_path %>
-      </div>
-
-      <div>
-        <%= link_to 'TRANSACTIONS', transactions_path %>
-        <%= link_to 'EXTERNAL', external_path %>
-        <%= link_to 'GROUPS', groups_path %>
-        <%= link_to 'LOGOUT', new_session_path, method: :delete %>
-      </div>
-    </nav>
-
     <% flash.each do |type, msg| %>
       <div class="alert">
         <p><%= msg %></p>
