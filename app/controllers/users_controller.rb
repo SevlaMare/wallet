@@ -13,10 +13,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # since is valid, make login
       cookies[:current_user_id] = @user.id
 
-      redirect_to root_path, notice: 'Account successfully created'
+      redirect_to user_path(cookies[:current_user_id]),
+        notice: 'Account successfully created'
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path
