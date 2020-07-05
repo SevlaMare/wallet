@@ -16,7 +16,9 @@
 <% current_user.transactions.with_group.sort_most_recent.each do |line| %>
   <div class="list-item">
 
-    <img src="<%= line.group.icon %>" class="icon float">
+    <%= link_to group_path(line.group.id) do %>
+      <%= image_tag(line.group.icon, class: "icon float") %>
+    <% end %>
 
     <div class="flex space-between">
       <p class="dark-text"><%= line.name %></p>
