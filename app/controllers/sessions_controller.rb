@@ -11,10 +11,10 @@ class SessionsController < ApplicationController
       }
 
       redirect_to root_path,
-        notice: 'Login successfully'
+                  notice: 'Login successfully'
     else
       redirect_to new_session_path,
-        alert: 'Name not recognized'
+                  alert: 'Name not recognized'
     end
   end
 

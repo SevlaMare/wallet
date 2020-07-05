@@ -30,7 +30,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   background: #3778c2;
-  background: linear-gradient(15deg, rgba(55,120,194,1) 75%, rgba(51,51,51,1) 98%);
+  background: linear-gradient(15deg, rgba(55, 120, 194, 1) 75%, rgba(51, 51, 51, 1) 98%);
   background-repeat: no-repeat;
 }
 
@@ -42,14 +42,14 @@ body {
 
 .float { float: left; }
 
-li { 
+li {
   list-style-type: none !important;
   padding: 20px 0;
 }
 
 a { text-decoration: none !important; }
 
-h1 { 
+h1 {
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
@@ -89,7 +89,6 @@ h3 {
   margin: 10px auto;
   padding: 15px;
   font-size: 16px;
-
   border: solid 2px #fff;
   border-radius: 3px;
   color: #fff;
@@ -126,7 +125,9 @@ hr {
   margin: 10px 0;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   color: #333;
   padding: 5px;
   margin-top: 10px;
