@@ -7,7 +7,9 @@
 <div class="list">
 <% @groups.each do |line| %>
   <div class="list-item">
-    <img src="<%= line.icon %>" class="icon float">
+    <%= link_to group_path(line.id) do %>
+      <%= image_tag(line.icon, class: "icon float") %>
+    <% end %>
 
     <div class="flex space-between">
       <p><%= link_to line.name, group_path(line.id), :class => "dark-text" %></p>
