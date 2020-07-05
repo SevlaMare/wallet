@@ -78,7 +78,6 @@
   <li>Dynamic Navbar</li>
 </ul>
 
-
 ## Built With
 
 - Ruby 2.7 <br>
@@ -120,6 +119,10 @@ Setup database with:
 
 ```
 rake db:schema:load
+```
+and populate the database with defaults with:
+```
+rails db:seed
 ```
 
 #### Run App
