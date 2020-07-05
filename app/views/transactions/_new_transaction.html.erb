@@ -6,9 +6,9 @@
   <%= form.number_field(:amount) %>
 
   <%= form.label(:group_id, 'Group: ') %>
-  <%= form.select(:group_id) do %>
+  <%= form.select(:group_id, nil, { include_blank: 'None' }) do %>
     <% @groups.each do |group| %>
-      <%= content_tag(:option, group.name, value: group.id) %>
+      <%= content_tag(:option, group[:name], value: group[:id]) %>
     <% end %>
   <% end %>
 
