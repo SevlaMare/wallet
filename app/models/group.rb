@@ -4,5 +4,6 @@ class Group < ApplicationRecord
   scope :sort_alphabetical, -> { order(name: :asc) }
 
   validates :name,
-            presence: true
+            presence: true,
+            uniqueness: true
 end

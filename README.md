@@ -3,7 +3,7 @@
 
 ![screenshot](docs/screenshot.png)
 
-<br>The main point on this project is to deploy a working app, starting from stratch, in less than 5 days.<br>
+<br>The main point on this project is to deploy a working app, starting from stratch, following the good practices.<br>
 
 ## Content
 
