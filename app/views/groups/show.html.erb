@@ -14,15 +14,18 @@
 
 <div class="list">
 <% @group.transactions.each do |line| %>
-  <div class="list-item">
+  <div class="list-item p-1">
 
-  <div class="flex space-between">
-  <p class="dark-text"><%= line.name %></p>
-  <p class="dark-text">$USD <%= number_with_precision(
-    line.amount, :precision => 2) %></p>
-  </div>
-    <%= line.created_at.strftime("%d %b %Y") %> •
-    by <%= line.user.name %><br>
+    <div class="flex space-between">
+      <p class="dark-text"><%= line.name %></p>
+      <p class="dark-text">$USD <%= number_with_precision(
+        line.amount, :precision => 2) %></p>
+    </div>
+
+    <div>
+    <br><p class="dark-text"><%= line.created_at.strftime("%d %b %Y") %> •
+      by <%= line.user.name %></p>
+    </div>
   </div>
 <% end %>
 </div>
