@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_06_22_163940) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
+    t.string "icon", default: "https://image.flaticon.com/icons/svg/906/906794.svg"
     t.datetime "created_at", null: false
   end
 
