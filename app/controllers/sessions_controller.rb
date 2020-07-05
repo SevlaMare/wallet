@@ -6,14 +6,15 @@ class SessionsController < ApplicationController
   def create
     if (userx = User.find_by(name: params[:username_in]))
 
-      # transforma em helper LOGIN, usa no user_controler/create
       cookies[:current_user_id] = {
-        value: userx.id, expires: Time.now + 3600
+        value: userx.id, expires: Time.now + 7200
       }
 
-      redirect_to root_path, notice: 'Login successfully'
+      redirect_to root_path,
+        notice: 'Login successfully'
     else
-      redirect_to new_session_path, alert: 'Name not recognized'
+      redirect_to new_session_path,
+        alert: 'Name not recognized'
     end
   end
 

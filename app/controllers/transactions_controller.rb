@@ -13,9 +13,10 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = current_user.transactions.build(transaction_params)
-    return redirect_to user_path(current_user.id) if @transaction.save
+    return redirect_to transactions_path if @transaction.save
 
-    render 'new', flash[:error] = 'Friend request has not been sent'
+    # flash[:error] = 'Transaction fail'
+    redirect_to new_transaction_path
   end
 
   def external

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       cookies[:current_user_id] = @user.id
 
       redirect_to user_path(cookies[:current_user_id]),
-        notice: 'Account successfully created'
+                  notice: 'Account successfully created'
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path

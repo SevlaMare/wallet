@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.save
+    return redirect_to groups_path if @group.save
   end
 
   private
