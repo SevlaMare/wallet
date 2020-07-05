@@ -5,7 +5,7 @@
   <%= form.label(:amount, 'Amount: ') %>
   <%= form.number_field(:amount) %>
 
-  <%= form.label(:amount, 'Group: ') %>
+  <%= form.label(:group_id, 'Group: ') %>
   <%= form.select(:group_id) do %>
     <% @groups.each do |group| %>
       <%= content_tag(:option, group.name, value: group.id) %>
@@ -13,6 +13,6 @@
   <% end %>
 
   <div class="flex btn-bg">
-    <%= form.submit('Register it!', class: 'btn btn-bg') %>
+    <%= form.submit('Go', class: 'btn btn-bg') %>
   </div>
 <% end %>
