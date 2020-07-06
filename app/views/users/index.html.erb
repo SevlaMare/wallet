@@ -1,7 +1,13 @@
-Welcome to Wallet
+<div class="sep">
+  <h1>Welcome to Wallet</h1>
+</div>
 
-<%= link_to 'LOGIN', new_session_path %>
+<div class="flex btn-bg">
+  <%= link_to 'LOGIN', new_session_path, :class => 'btn' %>
+</div>
 
-OR
+<p class="sep">OR</p>
 
-<%= link_to 'REGISTER', new_user_path %>
+<div class="flex btn-bg">
+  <%= link_to 'REGISTER', new_user_path, :class => 'btn' %>
+</div>

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :groups,       only: [:index, :show, :new, :create]
   resources :transactions, only: [:index, :new, :create]
   get       '/external',   to: 'transactions#external'
-  root      'users#show'
+  root      'users#index'
 end
