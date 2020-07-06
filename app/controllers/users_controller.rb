@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   before_action :require_login, only: %i[show]
-  before_action :not_logged, only: %i[new]
+  before_action :not_logged, only: %i[new, index]
 
-  def show
-    # user profile
-  end
+  # home page
+  def index; end
+
+  # user profile
+  def show; end
 
   def new
     @user = User.new
