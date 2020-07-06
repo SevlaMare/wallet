@@ -3,11 +3,12 @@
 
 ![screenshot](docs/screenshot.png)
 
-<br>The main point on this project is to deploy a working app, starting from stratch, in less than 5 days.<br>
+<br>The main point on this project is to deploy a working app, starting from stratch, following the good practices.<br>
 
 ## Content
 
-* [Features](#features)
+* [Business requirements](#business-requirements)
+* [Potential future features](#potential-future-features)
 * [Built With](#built-with)
 * [Database Diagram](#database-diagram)
 * [Getting Start](#getting-start)
@@ -31,7 +32,7 @@
   <li>See user profile and this is the main page</li>
 </ul>
 <ul>
-  <p>2 - Navigation menu with:<p>
+  <p>2 - Navigation links on user profile:<p>
   <li>All my transactions</li>
   <li>All my external transactions</li>
   <li>All groups</li>
@@ -57,17 +58,24 @@
 </ul>
 <ul>
   <p>6 - Group transactions page:</p>
-  <li>See all related transations</li>
+  <li>See all related transactions</li>
   <li>Similar layout as transactions list</li>
-  <li>Plus show name of who made the transation</li>
+  <li>Plus show name of who made the transaction</li>
 </ul>
 <ul>
   <p>7 - Create new...</p>
-  <li>user, group or transation has the properly form with styles</li>
+  <li>user, group or transaction has the properly form with styles</li>
 </ul>
 <ul>
-  <p>7 - Extra feature</p>
-  <li>Can see the balance based on transations expend x earned</li>
+  <p>8 - Extra feature</p>
+  <li>Can see the balance based on transactions expend x earned</li>
+</ul>
+
+## Potential future features
+<ul>
+  <li>Checklist while creating account</li>
+  <li>Search button</li>
+  <li>Dynamic Navbar</li>
 </ul>
 
 ## Built With
@@ -111,6 +119,10 @@ Setup database with:
 
 ```
 rake db:schema:load
+```
+and populate the database with defaults with:
+```
+rails db:seed
 ```
 
 #### Run App
