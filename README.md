@@ -54,10 +54,11 @@
 
 ## Built With
 
-- Ruby 2.7 <br>
+- Ruby 2.6 <br>
 - Ruby on Rails 5.2 <br>
-- Postgres and Devise gem (AOT)
-- Rubocop (Linter) with Stickler (CI Tool) <br>
+- Postgres <br>
+- Rubocop and Stylint (Linters) <br>
+- GitHub Actions (CI Tool) <br>
 - Git, Github and VScode <br>
 
 ## Database Diagram
@@ -126,6 +127,5 @@ A special thanks for the code reviewers.
 - Linkedin: [SevlaMare](https://www.linkedin.com/in/sevla-mare)
 
 ### License
-Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
-<br>
+Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.<br>
 <strong>Creative Commons • July 2020</strong>
