@@ -1,5 +1,5 @@
 # WalletGroup
-> A app where you can manager your personal cash flow
+> A app where you can manager your personal cash flow.
 
 ![screenshot](docs/screenshot.png)
 
@@ -46,9 +46,10 @@
 
 ## Potential future features
 <ul>
+  <li>Chart with incomes x outcomes</li>
+  <li>Search feature</li>
+  <li>Responsive Desgin with React</li>
   <li>Checklist while creating account</li>
-  <li>Search button</li>
-  <li>Dynamic Navbar</li>
 </ul>
 
 ## Built With
@@ -93,7 +94,7 @@ Setup database with:
 ```
 rake db:schema:load
 ```
-and populate the database with defaults with:
+and populate the database with defaults using:
 ```
 rails db:seed
 ```
@@ -105,17 +106,6 @@ rails server
 ```
 Now you can go to your favorite web browser like Google Chrome and access the url
 <br> http://localhost:3000
-
-
-#### Test (Remove before merge!)
-On terminal type:
-```
-rake db:test:load
-```
-It will create database for testing, to run the tests:
-```
-rspec
-```
 
 ### Contributing
 
@@ -138,4 +128,4 @@ A special thanks for the code reviewers.
 ### License
 Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 <br>
-<strong>Creative Commons • June 2020</strong>
+<strong>Creative Commons • July 2020</strong>
