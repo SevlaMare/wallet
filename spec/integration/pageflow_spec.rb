@@ -4,43 +4,30 @@ require 'rails_helper'
 
 RSpec.describe 'Main Flow', type: :system do
   describe 'Integration test' do
-    context 'main users flow' do
-      it 'create a user, logout, login, create group and transaction' do
+    context 'user flow' do
+      it 'interact with main actions' do
         visit('/')
         click_link 'REGISTER'
 
-        # # Fill the fields
-        # fill_in('user[name]', with: 'Crunchy Bacon')
-        # fill_in('user[email]', with: 'crunchy@bacon.com')
-        # fill_in('user[password]', with: '123123')
-        # fill_in('user[password_confirmation]', with: '123123')
-        # click_button 'Sign up'
+        # create user
+        fill_in('user[name]', with: 'test user')
+        find("input[type=submit][value='CREATE ACCOUNT']").click
 
-        # fill_in('post[content]', with: 'This test worked')
-        # click_button 'Save'
-        # click_link 'Sign out'
+        # create group
+        click_link 'All Groups'
+        click_link 'CREATE NEW'
+        fill_in('group[name]', with: 'test group')
+        find("input[type=submit][value='NEW GROUP']").click
 
-        # visit('/')
+        # create transaction
+        click_link 'arrow_back'
+        click_link 'All my transactions'
+        click_link 'ADD NEW'
 
-        # # Register
-        # page.find_by_id('sign-up-link').click
-
-        # # Fill the fields
-        # fill_in('user[name]', with: 'Salty Bacon')
-        # fill_in('user[email]', with: 'salty@bacon.com')
-        # fill_in('user[password]', with: '123123')
-        # fill_in('user[password_confirmation]', with: '123123')
-        # click_button 'Sign up'
-
-        # click_link 'All users'
-        # click_button 'Add Friend'
-        # click_link 'Sign out'
-
-        # fill_in('user[email]', with: 'crunchy@bacon.com')
-        # fill_in('user[password]', with: '123123')
-        # click_button 'Log in'
-        # click_link 'Friends'
-        # click_button 'Confirm'
+        fill_in('transaction[name]', with: 'test trans')
+        fill_in('transaction[amount]', with: '678')
+        select 'test group', :from => 'transaction[group_id]'
+        find("input[type=submit][value='GO']").click
       end
     end
   end
