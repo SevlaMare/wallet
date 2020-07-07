@@ -1,5 +1,5 @@
 <div class="flex space-between">
-  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, root_path %>
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, user_path(current_user.id) %>
   <h1>EXTERNAL TRANS.</h1>
   <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
 </div>
