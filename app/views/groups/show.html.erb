@@ -1,5 +1,5 @@
 <div class="flex space-between">
-  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, transactions_path %>
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, groups_path %>
   <h1><%= @group.name %> transactions</h1>
   <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
 </div>
@@ -9,7 +9,7 @@
 
   <p>$<%= number_with_precision(
     @group.transactions.sum(:amount),
-    :precision => 2) %></p>
+      :precision => 2) %></p>
 </div>
 
 <div class="list">
