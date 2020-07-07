@@ -26,7 +26,7 @@ RSpec.describe 'Main Flow', type: :system do
 
         fill_in('transaction[name]', with: 'test trans')
         fill_in('transaction[amount]', with: '678')
-        select 'test group', :from => 'transaction[group_id]'
+        select 'test group', from: 'transaction[group_id]'
         find("input[type=submit][value='GO']").click
       end
     end
