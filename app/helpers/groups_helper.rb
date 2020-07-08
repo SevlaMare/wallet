@@ -26,13 +26,15 @@ module GroupsHelper
             concat(
               content_tag(:div, class: 'flex space-between') do
                 content_tag(:p, line.name, class: 'dark-text') +
-                content_tag(:p, "USD$#{number_with_precision(line.amount, :precision => 2)}", class: 'dark-text')
+                content_tag(:p, "USD$#{number_with_precision(line.amount, precision: 2)}",
+                            class: 'dark-text')
               end
             )
             concat(
               content_tag(:div) do
                 tag(:br) +
-                content_tag(:p, "#{line.created_at.strftime("%d %b %Y")} • by #{line.user.name}", class: 'dark-text')              
+                content_tag(:p, "#{line.created_at.strftime('%d %b %Y')}
+                  • by #{line.user.name}", class: 'dark-text')
               end
             )
           end
