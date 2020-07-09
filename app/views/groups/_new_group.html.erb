@@ -1,3 +1,5 @@
+<%= render partial: "layouts/errors" %>
+
 <%= form_with(model: @group) do |form| %>
   <%= form.label(:name, 'Name: ') %>
   <%= form.text_field(:name) %><br>

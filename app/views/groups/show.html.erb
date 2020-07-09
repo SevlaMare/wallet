@@ -10,8 +10,8 @@
   <h3>Total amount</h3>
 
   <p>$<%= number_with_precision(
-    @group.transactions.sum(:amount),
-      :precision => 2) %></p>
+    @group.transactions.sum(:amount), :precision => 2) %>
+  </p>
 </div>
 
 <%= transactions_of(@group.transactions) %>
