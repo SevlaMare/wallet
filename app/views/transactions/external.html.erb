@@ -14,19 +14,7 @@
     :precision => 2) %></p>
 </div>
 
-<div class="list">
-<% @external_trans.each do |line| %>
-  <div class="list-item">
-    <div class="flex space-between">
-      <p class="dark-text"><%= line.name %></p>
-      <p class="dark-text t-bold">$
-        <%= number_with_precision(line.amount, :precision => 2) %>
-      </p>
-    </div><hr>
-    <%= line.created_at.strftime("%d %b %Y") %><br>
-  </div>
-<% end %>
-</div>
+<%= transactions_ext_list(@external_trans) %>
 
 <div class="flex btn-bg">
   <%= link_to 'ADD NEW', new_transaction_path, :class => "btn" %>
