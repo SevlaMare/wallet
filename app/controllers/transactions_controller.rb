@@ -14,12 +14,12 @@ class TransactionsController < ApplicationController
     @transaction = current_user.transactions.build(transaction_params)
     return redirect_to transactions_path if @transaction.save
 
-    # flash[:error] = 'Transaction fail'
+    flash[:errors] = @transaction.errors.full_messages
     redirect_to new_transaction_path
   end
 
   def external
-    @transaction = Transaction.all
+    @external_trans = current_user.transactions.without_group.sort_most_recent.includes(:group)
   end
 
   private

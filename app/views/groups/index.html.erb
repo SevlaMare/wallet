@@ -1,25 +1,12 @@
 <div class="flex space-between">
-  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, root_path %>
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe,
+    user_path(current_user.id) %>
   <h1>GROUPS</h1>
-  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
+  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe,
+    new_session_path, method: :delete %>
 </div>
 
-<div class="list">
-<% @groups.each do |line| %>
-  <div class="list-item">
-    <%= link_to group_path(line.id) do %>
-      <%= image_tag(line.icon, class: "icon float") %>
-    <% end %>
-
-    <div class="flex space-between">
-      <p><%= link_to line.name, group_path(line.id), :class => "dark-text" %></p>
-    </div>
-
-    <hr>
-    <%= line.created_at.strftime("%d %b %Y") %><br>
-  </div>
-<% end %>
-</div>
+<%= groups_list(@groups) %>
 
 <div class="flex btn-bg">
   <%= link_to 'CREATE NEW', new_group_path, :class => "btn" %>

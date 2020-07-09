@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, only: %i[show]
-  before_action :not_logged, only: %i[new index]
+  before_action :not_logged, only: %i[new create index]
 
   # home page
   def index; end
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       cookies[:current_user_id] = @user.id
 
       redirect_to user_path(cookies[:current_user_id]),
-                  notice: 'Account successfully created'
+                  notice: 'Account successfully created.'
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path
@@ -28,6 +28,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :image)
   end
 end

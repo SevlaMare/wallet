@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def not_logged
-    redirect_to user_path(cookies[:current_user_id]), notice: 'You already logged' if current_user
+    redirect_to user_path(cookies[:current_user_id]), success: 'You already logged' if current_user
   end
 end

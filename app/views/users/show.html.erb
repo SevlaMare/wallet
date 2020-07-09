@@ -1,4 +1,8 @@
-<%= current_username %>
+<div class="flex dir-col">
+  <%= display_avatar(current_user) %>
+
+  <h1 class="center-space"><%= current_user.name %></h1>
+</div>
 
 <ul>
   <li><%= link_to 'All my transactions', transactions_path %><br></li>

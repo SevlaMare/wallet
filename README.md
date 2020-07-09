@@ -1,9 +1,9 @@
 # WalletGroup
-> A app where you can manager your personal cash flow
+> A app where you can manager your personal cash flow.
 
 ![screenshot](docs/screenshot.png)
 
-<br>The main point on this project is to deploy a working app, starting from stratch, following the good practices.<br>
+<br>The main point on this project is to deploy a working app, starting from stretch, following the good practices.<br>
 
 ## Content
 
@@ -19,71 +19,46 @@
 
 ## Business requirements
 
-<p>Use same design pattern in all pages</li>
-
 <ul>
-  <p>0 - As a guest your can: </p>
+  <p>User</p>
   <li>Create account and make login</li>
   <li>Authenticate with username only</li>
 </ul>
 
 <ul>
-  <p>1 - As a logged-in user: </p>
-  <li>See user profile and this is the main page</li>
+  <p>Transactions and External transactions</p>
+  <li>Display total and a list with all transactions</li>
+  <li>Authenticate with username only</li>
 </ul>
+
 <ul>
-  <p>2 - Navigation links on user profile:<p>
-  <li>All my transactions</li>
-  <li>All my external transactions</li>
-  <li>All groups</li>
+  <p>Groups</p>
+  <li>Create groups</li>
+  <li>See a list with all groups</li>
+  <li>See transactions by groups</li>
 </ul>
+
 <ul>
-  <p>3 - All transactions list page:</p>
-  <li>Total amount (Balance)</li>
-  <li>A ordered transactions list</li>
-  <li>Each line displays its name, amount and date, with an icon from group</li>
-  <li>Button to add transactions</li>
+  <p>Design</p>
+  <li>Mobile App</li>
 </ul>
-<ul>
-  <p>4 - External transactions list page:</p>
-  <li>Show all transactions created but not assigned to groups (sorted by most recent).</li>
-  <li>Similar layout as transactions list</li>
-</ul>
-<ul>
-  <p>5 - Groups transactions page:</p>
-  <li>List all categories by alphabetical order</li>
-  <li>Each line display a icon, name and creation date</li>
-  <li>Button to create new category</li>
-  <li>Similar layout as profile</li>
-</ul>
-<ul>
-  <p>6 - Group transactions page:</p>
-  <li>See all related transactions</li>
-  <li>Similar layout as transactions list</li>
-  <li>Plus show name of who made the transaction</li>
-</ul>
-<ul>
-  <p>7 - Create new...</p>
-  <li>user, group or transaction has the properly form with styles</li>
-</ul>
-<ul>
-  <p>8 - Extra feature</p>
-  <li>Can see the balance based on transactions expend x earned</li>
-</ul>
+
 
 ## Potential future features
 <ul>
+  <li>Chart with incomes x outcomes</li>
+  <li>Search feature</li>
+  <li>Responsive Desgin with React</li>
   <li>Checklist while creating account</li>
-  <li>Search button</li>
-  <li>Dynamic Navbar</li>
 </ul>
 
 ## Built With
 
-- Ruby 2.7 <br>
+- Ruby 2.6 <br>
 - Ruby on Rails 5.2 <br>
-- Postgres and Devise gem (AOT)
-- Rubocop (Linter) with Stickler (CI Tool) <br>
+- Postgres <br>
+- Rubocop and Stylint (Linters) <br>
+- GitHub Actions (CI Tool) <br>
 - Git, Github and VScode <br>
 
 ## Database Diagram
@@ -109,7 +84,7 @@ Otherwise just hit (Download Zip) on green button (Clone or Download) at top of 
 
 #### Setup
 
-Instal all dependencies with:
+Install all dependencies with:
 
 ```
 bundle install
@@ -120,7 +95,7 @@ Setup database with:
 ```
 rake db:schema:load
 ```
-and populate the database with defaults with:
+and populate the database with defaults using:
 ```
 rails db:seed
 ```
@@ -130,19 +105,8 @@ To run, from the application folder, just type on terminal:
 ```js
 rails server
 ```
-Now you can go to your favorite web browser like Google Crome and access the url
+Now you can go to your favorite web browser like Google Chrome and access the url
 <br> http://localhost:3000
-
-
-#### Test (Remove before merge!)
-On terminal type:
-```
-rake db:test:load
-```
-It will create database for testing, to run the tests:
-```
-rspec
-```
 
 ### Contributing
 
@@ -163,6 +127,5 @@ A special thanks for the code reviewers.
 - Linkedin: [SevlaMare](https://www.linkedin.com/in/sevla-mare)
 
 ### License
-Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
-<br>
-<strong>Creative Commons • June 2020</strong>
+Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.<br>
+<strong>Creative Commons • July 2020</strong>
