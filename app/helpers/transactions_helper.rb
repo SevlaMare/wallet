@@ -25,8 +25,7 @@ module TransactionsHelper
             )
             concat(
               tag(:hr) +
-              content_tag(:p, line.created_at.strftime('%d %b %Y'), class: 'dark-text') +
-              tag(:br)
+              content_tag(:p, line.created_at.strftime('%d %b %Y'), class: 'dark-text')
             )
           end
         )
@@ -48,8 +47,7 @@ module TransactionsHelper
             )
             concat(
               tag(:hr) +
-              content_tag(:p, line.created_at.strftime('%d %b %Y'), class: 'dark-text') +
-              tag(:br)
+              content_tag(:p, line.created_at.strftime('%d %b %Y'), class: 'dark-text')
             )
           end
         )
