@@ -3,10 +3,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-# development:
-#   <<: *default
-#   adapter: sqlite3
-#   database: db/development.sqlite3
+development:
+  <<: *default
+  adapter: sqlite3
+  database: db/development.sqlite3
 
   # adapter: postgresql
   # database: app_postgres_development
@@ -15,10 +15,10 @@ default: &default
   # username: apptest
   # password: password1
 
-# test:
-#   <<: *default
-#   adapter: sqlite3
-#   database: db/test.sqlite3
+test:
+  <<: *default
+  adapter: sqlite3
+  database: db/test.sqlite3
 
   # adapter: postgresql
   # database: app_postgres_test
