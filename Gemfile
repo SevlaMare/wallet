@@ -5,7 +5,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
-# gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # assets
 gem 'coffee-rails', '~> 4.2'
@@ -19,7 +18,7 @@ gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
+  # gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 end
 
 group :development do
@@ -38,13 +37,12 @@ group :test do
 
   gem 'capybara', '>= 2.15'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
-  # gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
   gem 'webdrivers', '~> 4.4', '>= 4.4.1'
 end
 
-# group :production do
-# gem 'pg', '~> 1.2', '>= 1.2.3'
-# end
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+end
 
 # Windows compatible
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
