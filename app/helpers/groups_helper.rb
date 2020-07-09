@@ -26,7 +26,7 @@ module GroupsHelper
             concat(
               content_tag(:div, class: 'flex space-between') do
                 content_tag(:p, line.name, class: 'dark-text') +
-                content_tag(:p, "USD$#{number_with_precision(line.amount, precision: 2)}",
+                content_tag(:p, "$#{number_with_precision(line.amount, precision: 2)}",
                             class: 'dark-text')
               end
             )

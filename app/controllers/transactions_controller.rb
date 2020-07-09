@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :require_login, only: %i[index new create external]
 
   def index
-    @transactions = current_user.transactions.with_group.sort_most_recent.includes(:group)
+    @transactions2 = current_user.transactions.with_group.sort_most_recent.includes(:group)
   end
 
   def new
@@ -18,7 +18,8 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    @transaction = Transaction.all
+    @external_trans = current_user.transactions
+      .without_group.sort_most_recent
   end
 
   private

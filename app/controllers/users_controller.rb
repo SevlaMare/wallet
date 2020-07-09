@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, only: %i[show]
-  before_action :not_logged, only: %i[new index]
+  before_action :not_logged, only: %i[new create index]
 
   # home page
   def index; end

@@ -1,7 +1,9 @@
 <div class="flex space-between">
-  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe, user_path(current_user.id) %>
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe,
+    user_path(current_user.id) %>
   <h1>EXTERNAL TRANS.</h1>
-  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe, new_session_path, method: :delete %>
+  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe,
+  new_session_path, method: :delete %>
 </div>
 
 <div class="flex space-between align-center board">
@@ -13,11 +15,13 @@
 </div>
 
 <div class="list">
-<% current_user.transactions.without_group.sort_most_recent.each do |line| %>
+<% @external_trans.each do |line| %>
   <div class="list-item">
     <div class="flex space-between">
       <p class="dark-text"><%= line.name %></p>
-      <p class="dark-text t-bold">$<%= number_with_precision(line.amount, :precision => 2) %></p>
+      <p class="dark-text t-bold">$
+        <%= number_with_precision(line.amount, :precision => 2) %>
+      </p>
     </div><hr>
     <%= line.created_at.strftime("%d %b %Y") %><br>
   </div>
