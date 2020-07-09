@@ -4,6 +4,9 @@
   <%= form.label(:name, 'Your username: ') %>
   <%= form.text_field(:name) %>
 
+  <%= form.label(:image, 'upload avatar: ') %>
+  <%= form.file_field(:image) %>
+
   <div class="flex btn-bg">
     <%= form.submit('CREATE ACCOUNT', class: 'btn btn-bg') %>
   </div>

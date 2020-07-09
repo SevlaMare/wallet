@@ -1,4 +1,7 @@
-<h1><%= current_user.name %></h1>
+<div class="flex dir-col">
+  <%= image_tag(current_user.image, class: "avatar center-space") %>
+  <h1 class="center-space"><%= current_user.name %></h1>
+</div>
 
 <ul>
   <li><%= link_to 'All my transactions', transactions_path %><br></li>
