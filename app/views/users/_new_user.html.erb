@@ -2,9 +2,9 @@
 
 <%= form_with(model: @user) do |form| %>
   <%= form.label(:name, 'Your username: ') %>
-  <%= form.text_field(:name) %>
+  <%= form.text_field(:name) %><br>
 
-  <%= form.label(:image, 'upload avatar: ') %>
+  <%= form.label(:image, 'Upload avatar: ') %>
   <%= form.file_field(:image) %>
 
   <div class="flex btn-bg">

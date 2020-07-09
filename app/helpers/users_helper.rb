@@ -6,8 +6,6 @@ module UsersHelper
   end
 
   def display_avatar(who)
-    if who.image.attached?
-      image_tag(who.image, class: "avatar center-space")
-    end
+    image_tag(who.image, class: 'avatar center-space') if who.image.attached?
   end
 end
