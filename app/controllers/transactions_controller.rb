@@ -14,6 +14,7 @@ class TransactionsController < ApplicationController
     @transaction = current_user.transactions.build(transaction_params)
     return redirect_to transactions_path if @transaction.save
 
+    flash[:errors] = @transaction.errors.full_messages
     redirect_to new_transaction_path
   end
 

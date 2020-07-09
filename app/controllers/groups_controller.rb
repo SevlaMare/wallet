@@ -16,6 +16,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     return redirect_to groups_path if @group.save
+
     flash[:errors] = @group.errors.full_messages
     redirect_to new_group_path
   end

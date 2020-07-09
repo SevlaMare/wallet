@@ -1,3 +1,5 @@
+<%= render partial: "layouts/errors" %>
+
 <%= form_with(model: @transaction) do |form| %>
   <%= form.label(:name, 'Subject: ') %>
   <%= form.text_field(:name) %>
