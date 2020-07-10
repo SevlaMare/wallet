@@ -1,9 +1,7 @@
 module ApplicationHelper
-  def flash_messages
+  def flash_messages(type, style = 'alert-danger')
     flash.map do |_msg|
-      content_tag(:p, notice, class: 'alert alert-danger') if notice
-      content_tag(:p, success, class: 'alert alert-success') if success
-      content_tag(:p, alert, class: 'alert alert-danger') if alert
+      content_tag(:p, type, class: "alert #{style}") if type
     end.join.html_safe
   end
 end

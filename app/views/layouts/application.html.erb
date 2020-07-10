@@ -14,7 +14,9 @@
   </head>
 
   <body class="container">
-    <%= flash_messages %>
+    <%= flash_messages(notice) %>
+    <%= flash_messages(alert) %>
+    <%= flash_messages(success, 'alert-success') %>
 
     <%= yield %>
   </body>
