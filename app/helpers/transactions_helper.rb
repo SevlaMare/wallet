@@ -15,12 +15,11 @@ module TransactionsHelper
             concat(
               content_tag(:p, (link_to image_tag(line.group.icon, class: 'icon float'),
                                        group_path(line.group.id), class: 'dark-text'))
-            )
+            ) unless line.group.nil?
             concat(
               content_tag(:div, class: 'flex space-between') do
-                content_tag(:p, (link_to line.name, group_path(line.group.id), class: 'dark-text')) +
-                content_tag(:p, "$#{number_with_precision(line.amount, precision: 2)}",
-                            class: 'dark-text')
+                content_tag(:p, line.name, class: 'dark-text') +
+                content_tag(:p, "$#{number_with_precision(line.amount, precision: 2)}", class: 'dark-text')
               end
             )
             concat(
