@@ -12,10 +12,12 @@ module TransactionsHelper
       query.map do |line|
         concat(
           content_tag(:div, class: 'list-item') do
-            concat(
-              content_tag(:p, (link_to image_tag(line.group.icon, class: 'icon float'),
-                                       group_path(line.group.id), class: 'dark-text'))
-            ) unless line.group.nil?
+            unless line.group.nil?
+              concat(
+                content_tag(:p, (link_to image_tag(line.group.icon, class: 'icon float'),
+                                         group_path(line.group.id), class: 'dark-text'))
+              )
+            end
             concat(
               content_tag(:div, class: 'flex space-between') do
                 content_tag(:p, line.name, class: 'dark-text') +

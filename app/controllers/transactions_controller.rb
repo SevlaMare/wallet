@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
   def index
     @transactions = current_user.transactions
       .sort_most_recent.includes(:group)
-      #.with_group.sort_most_recent.includes(:group)
+    # .with_group.sort_most_recent.includes(:group)
   end
 
   def new
