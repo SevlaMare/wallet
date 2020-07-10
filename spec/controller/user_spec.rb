@@ -1,5 +1,3 @@
-# rspec ./spec/controller/user_spec.rb
-
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
