@@ -14,26 +14,7 @@
   </head>
 
   <body class="container">
-
-    <% flash.each do |msg| %>
-      <% if notice.present? %>
-        <p class="alert alert-danger">
-          <%= notice %>
-        </p>
-      <% end %>
-
-      <% if alert.present? %>
-        <p class="alert alert-danger">
-          <%= alert %>
-        </p>
-      <% end %>
-
-      <% if success.present? %>
-        <p class="alert alert-success">
-          <%= success %>
-        </p>
-      <% end %>
-    <% end %>
+    <%= flash_messages %>
 
     <%= yield %>
   </body>
