@@ -1,24 +1,136 @@
-# README
+# WalletGroup
+> A app where you can manager your personal cash flow.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![screenshot](docs/screenshot.png)
 
-Things you may want to cover:
+<br>The main point on this project is to deploy a working app, starting from stretch, following the good practices.<br>
 
-* Ruby version
+## Content
 
-* System dependencies
+* [Live Demo](#live-demo)
+* [Business requirements](#business-requirements)
+* [Potential future features](#potential-future-features)
+* [Built With](#built-with)
+* [Database Diagram](#database-diagram)
+* [Getting Start](#getting-start)
+* [Contributing](#contributing)
+* [Acknowledgments](#acknowledgments)
+* [Author](#author)
+* [License](#license)
 
-* Configuration
+## Live Demo
+You can access a deployed version of this app:<br>
+https://evening-wildwood-86896.herokuapp.com/
 
-* Database creation
+## Business requirements
 
-* Database initialization
+<ul>
+  <p>User</p>
+  <li>Create account and make login</li>
+  <li>Authenticate with username only</li>
+</ul>
 
-* How to run the test suite
+<ul>
+  <p>Transactions and External transactions</p>
+  <li>Display total and a list with all transactions</li>
+  <li>Authenticate with username only</li>
+</ul>
 
-* Services (job queues, cache servers, search engines, etc.)
+<ul>
+  <p>Groups</p>
+  <li>Create groups</li>
+  <li>See a list with all groups</li>
+  <li>See transactions by groups</li>
+</ul>
 
-* Deployment instructions
+<ul>
+  <p>Design</p>
+  <li>Mobile App</li>
+</ul>
 
-* ...
+
+## Potential future features
+<ul>
+  <li>Chart with incomes x outcomes</li>
+  <li>Search feature</li>
+  <li>Responsive Desgin with React</li>
+  <li>Checklist while creating account</li>
+</ul>
+
+## Built With
+
+- Ruby 2.6 <br>
+- Ruby on Rails 5.2 <br>
+- Postgres <br>
+- Rubocop and Stylint (Linters) <br>
+- GitHub Actions (CI Tool) <br>
+- Git, Github and VScode <br>
+
+## Database Diagram
+![erd](docs/diagram.png)
+
+
+## Getting Start
+
+#### Install
+To use this program, you will need install:
+* Ruby Language - Version 2.6 - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
+
+* Ruby on Rails - Version 5.2 - [Install guide](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
+
+
+#### Get a local copy
+Now you need a copy of this application, if you are using Git:
+```js
+git clone git@github.com:SevlaMare/wallet.git
+```
+Otherwise just hit (Download Zip) on green button (Clone or Download) at top of this page.
+
+
+#### Setup
+
+Install all dependencies with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+rake db:schema:load
+```
+and populate the database with defaults using:
+```
+rails db:seed
+```
+
+#### Run App
+To run, from the application folder, just type on terminal:
+```js
+rails server
+```
+Now you can go to your favorite web browser like Google Chrome and access the url
+<br> http://localhost:3000
+
+### Contributing
+
+Contributions, issues and feature requests are welcome!
+
+You can do it on [issues page](issues/).
+
+## Acknowledgments
+
+A special thanks for the code reviewers.
+
+## Author
+
+👤 **Thiago Miranda**
+
+- Github: [@SevlaMare](https://github.com/SevlaMare)
+- Twitter: [#SevlaMare](https://twitter.com/SevlaMare)
+- Linkedin: [SevlaMare](https://www.linkedin.com/in/sevla-mare)
+
+### License
+Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.<br>
+<strong>Creative Commons • July 2020</strong>

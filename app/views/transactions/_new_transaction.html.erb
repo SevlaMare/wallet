@@ -1,0 +1,20 @@
+<%= render partial: "layouts/errors" %>
+
+<%= form_with(model: @transaction) do |form| %>
+  <%= form.label(:name, 'Subject: ') %>
+  <%= form.text_field(:name) %>
+
+  <%= form.label(:amount, 'Amount: ') %>
+  <%= form.number_field(:amount) %>
+
+  <%= form.label(:group_id, 'Group: ') %>
+  <%= form.select(:group_id, nil, { include_blank: 'None' }) do %>
+    <% @groups.each do |group| %>
+      <%= content_tag(:option, group[:name], value: group[:id]) %>
+    <% end %>
+  <% end %>
+
+  <div class="flex btn-bg">
+    <%= form.submit('GO', class: 'btn btn-bg') %>
+  </div>
+<% end %>

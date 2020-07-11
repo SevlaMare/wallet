@@ -1,0 +1,21 @@
+<div class="flex space-between">
+  <%= link_to '<span class="material-icons">arrow_back</span>'.html_safe,
+    user_path(current_user.id) %>
+  <h1>TRANSACTIONS</h1>
+  <%= link_to '<span class="material-icons">power_settings_new</span>'.html_safe,
+    new_session_path, method: :delete %>
+</div>
+
+<div class="flex space-between align-center board">
+  <h3>Total amount</h3>
+
+  <p>$<%= number_with_precision(
+    current_user.transactions.with_group.sum(:amount),
+    :precision => 2) %></p>
+</div>
+
+<%= transactions_list(@transactions) %>
+
+<div class="flex btn-bg">
+  <%= link_to 'ADD NEW', new_transaction_path, :class => "btn" %>
+</div>
