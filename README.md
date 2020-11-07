@@ -1,9 +1,9 @@
 # WalletGroup
-> A app where you can manager your personal cash flow.
+> An app where you can manage your cash flow.
 
 ![screenshot](docs/screenshot.png)
 
-<br>The main point on this project is to deploy a working app, starting from stretch, following the good practices.<br>
+<br>The main point of this project is to deploy a working app, starting from the stretch, following the good practices.<br>
 
 ## Content
 
@@ -26,7 +26,7 @@ https://evening-wildwood-86896.herokuapp.com/
 
 <ul>
   <p>User</p>
-  <li>Create account and make login</li>
+  <li>Create an account and make a login</li>
   <li>Authenticate with username only</li>
 </ul>
 
@@ -53,8 +53,8 @@ https://evening-wildwood-86896.herokuapp.com/
 <ul>
   <li>Chart with incomes x outcomes</li>
   <li>Search feature</li>
-  <li>Responsive Desgin with React</li>
-  <li>Checklist while creating account</li>
+  <li>Responsive Design</li>
+  <li>Checklist while creating an account</li>
 </ul>
 
 ## Built With
@@ -73,7 +73,7 @@ https://evening-wildwood-86896.herokuapp.com/
 ## Getting Start
 
 #### Install
-To use this program, you will need install:
+To use this program, you will need to install:
 * Ruby Language - Version 2.6 - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
 
 * Ruby on Rails - Version 5.2 - [Install guide](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
@@ -84,7 +84,7 @@ Now you need a copy of this application, if you are using Git:
 ```js
 git clone git@github.com:SevlaMare/wallet.git
 ```
-Otherwise just hit (Download Zip) on green button (Clone or Download) at top of this page.
+Otherwise just hit (Download Zip) on the green button (Code) at top of this page.
 
 
 #### Setup
@@ -110,7 +110,7 @@ To run, from the application folder, just type on terminal:
 ```js
 rails server
 ```
-Now you can go to your favorite web browser like Google Chrome and access the url
+Now you can go to your favorite web browser like Google Chrome and access the URL
 <br> http://localhost:3000
 
 ### Contributing
@@ -121,7 +121,7 @@ You can do it on [issues page](issues/).
 
 ## Acknowledgments
 
-A special thanks for the code reviewers.
+A special thanks to the code reviewers.
 
 ## Author
 
